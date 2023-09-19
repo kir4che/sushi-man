@@ -1,0 +1,108 @@
+.subscription {
+	padding: 64px;
+	background-color: $primary-color;
+	background-image: url('/public/assets/subscribe_bg.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	flex-direction: column;
+	overflow: hidden;
+
+	h2 {
+		font-size: 88px;
+		font-family: $playfair-display;
+		font-weight: 600;
+		line-height: 123px;
+		color: $color-white;
+		text-align: center;
+	}
+
+	p {
+		font-size: 18px;
+		font-family: $plus-jakarta-sans;
+		font-weight: 300;
+		line-height: 36px;
+		margin-top: 32px;
+		color: rgba(255, 255, 255, 0.8);
+	}
+}
+
+.subscription_form {
+	min-width: 480px;
+	margin-top: 40px;
+	padding: 14px 14px 14px 24px;
+	display: flex;
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	border-radius: 46px;
+
+	input {
+		flex: 1;
+		font-size: 16px;
+		font-weight: 400px;
+		font-family: $plus-jakarta-sans;
+		color: $color-white;
+		opacity: 0.5;
+		background: transparent;
+		border: none;
+		outline: none;
+
+		&::placeholder {
+			color: $color-white;
+			opacity: 0.5;
+		}
+	}
+
+	button {
+		padding: 16px;
+		min-width: 130px;
+		font-size: 16px;
+		font-weight: 500;
+		font-family: $plus-jakarta-sans;
+		color: $color-white;
+		text-align: center;
+		background: $secondary-color;
+		border-radius: 46px;
+		border: none;
+		outline: none;
+		cursor: pointer;
+
+		&:hover {
+			background: $black-300;
+			scale: 1.02;
+		}
+		&:active {
+			scale: 0.99;
+		}
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.subscription {
+		padding: 64px 32px;
+
+		h2 {
+			font-size: 68px;
+			line-height: 100px;
+		}
+	}
+
+	.subscription_form {
+		flex-direction: column;
+		gap: 20px;
+		min-width: 100%;
+		border-radius: 20px;
+		padding: 0;
+		border: none;
+
+		input {
+			min-height: 50px;
+			border: 1px solid rgba(255, 255, 255, 0.5);
+			padding: 10px 20px;
+			border-radius: 30px;
+		}
+
+		button {
+			min-width: 100%;
+		}
+	}
+}
