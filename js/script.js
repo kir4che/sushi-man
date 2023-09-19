@@ -7,14 +7,14 @@ const popularFoodsCatalogue = document.querySelector('.popular-foods_catalogue')
 
 const cards = [
 	{
-		imgSrc: '/public/assets/sushi-12.png',
+		imgSrc: '/./assets/sushi-12.png',
 		alt: 'sushi-12',
 		title: 'たまご寿司',
 		rating: '4.9',
 		price: '¥100',
 	},
 	{
-		imgSrc: '/public/assets/sushi-11.png',
+		imgSrc: '/./assets/sushi-11.png',
 		alt: 'sushi-11',
 		title: 'サーモン寿司',
 		rating: '5.0',
@@ -22,7 +22,7 @@ const cards = [
 		active: true,
 	},
 	{
-		imgSrc: '/public/assets/sushi-10.png',
+		imgSrc: '/./assets/sushi-10.png',
 		alt: 'sushi-10',
 		title: '豚骨ラーメン',
 		rating: '4.6',
@@ -51,7 +51,7 @@ cards.forEach((cardData) => {
 	const divRating = document.createElement('div')
 	divRating.classList.add('popular-foods_card-rating')
 	const imgStar = document.createElement('img')
-	imgStar.src = '/public/assets/star.svg'
+	imgStar.src = '/./assets/star.svg'
 	imgStar.alt = 'star'
 	const pRating = document.createElement('p')
 	pRating.textContent = cardData.rating
@@ -79,7 +79,7 @@ const createListItemElement = (itemName) => {
 	const listItem = document.createElement('li')
 	listItem.innerHTML = `
     <div class="trending_icon flex-center">
-      <img src="/public/assets/check.svg" alt="check" />
+      <img src="../assets/check.svg" alt="check" />
     </div>
     <p>${itemName}</p>
   `
